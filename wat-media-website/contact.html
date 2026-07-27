@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Wat Media — Shenandoah Valley Video & Marketing</title>
+<meta name="description" content="Get in touch with Wat Media. We serve Harrisonburg, Staunton, Waynesboro, and the whole Shenandoah Valley.">
+
+<link rel="canonical" href="https://watmediallc.com/contact">
+<link rel="icon" href="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wat.css">
+
+<!-- Meta Pixel — replace YOUR_PIXEL_ID with your actual Pixel ID -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+<style>
+.contact-page-hero {
+  padding-bottom: clamp(56px, 8vw, 100px);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(40px, 6vw, 64px);
+  align-items: start;
+}
+.contact-info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.contact-info-block:first-child { border-top: 1px solid var(--line-soft); }
+.ci-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--blue-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ci-icon svg { width: 18px; height: 18px; color: var(--blue); }
+.ci-label { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-mut); margin-bottom: 2px; }
+.ci-value { font-weight: 600; color: var(--text-ink); font-size: 15px; }
+.ci-value a { color: inherit; }
+.ci-value a:hover { color: var(--blue); }
+
+/* Form card */
+.contact-form-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 40px);
+  box-shadow: var(--shadow-card);
+}
+.contact-form-card .form-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text-ink);
+  margin-bottom: 6px;
+}
+.contact-form-card .form-sub {
+  font-size: 14px;
+  color: var(--text-mut);
+  margin-bottom: 24px;
+}
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 13px; font-weight: 600; color: var(--text-lo); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-ink);
+  background: var(--paper);
+  transition: border-color .2s, box-shadow .2s;
+  outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-dim);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+.form-submit {
+  width: 100%;
+  margin-top: 8px;
+  cursor: pointer;
+  border: none;
+}
+.form-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-mut);
+  margin-top: 12px;
+  justify-content: center;
+}
+.form-note svg { width: 13px; height: 13px; flex-shrink: 0; }
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 32px 16px;
+}
+.form-success.show { display: block; }
+.form-success-icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: rgba(22,163,74,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--green);
+}
+.form-success-icon svg { width: 26px; height: 26px; }
+
+@media (min-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr 1.4fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="https://watmediallc.com" class="nav-logo" aria-label="Wat Media home">
+      <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="Wat Media logo" width="44" height="30">
+      <span class="wordmark">Wat Media</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="https://watmediallc.com/#how">Process</a>
+      <div class="nav-drop">
+        <button class="nav-link" aria-haspopup="true">Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="drop-panel">
+          <a href="https://watmediallc.com/videography"><span class="t">Videography</span><span class="d">Free first promo video</span></a>
+          <a href="https://watmediallc.com/meta-ads"><span class="t">Meta Ads</span><span class="d">Facebook &amp; Instagram campaigns</span></a>
+          <a href="https://watmediallc.com/social-media"><span class="t">Social Media</span><span class="d">Instagram, Facebook &amp; TikTok</span></a>
+          <a href="https://watmediallc.com/websites"><span class="t">Website Design</span><span class="d">Hand-coded, starting at $299</span></a>
+        </div>
+      </div>
+      <a href="https://watmediallc.com/#founder">Meet Freddie</a>
+      <a href="https://watmediallc.com/#faq">FAQ</a>
+      <a href="https://watmediallc.com/contact" class="active">Contact</a>
+    </nav>
+    <a href="https://watmediallc.com/#claim" class="btn btn-primary nav-cta">Claim Free Video</a>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu" aria-label="Mobile navigation">
+  <p class="menu-label">Services</p>
+  <a class="menu-link" href="https://watmediallc.com/videography"><span class="idx">01</span>Videography <span class="tag">FREE FIRST VIDEO</span></a>
+  <a class="menu-link" href="https://watmediallc.com/meta-ads"><span class="idx">02</span>Meta Ads</a>
+  <a class="menu-link" href="https://watmediallc.com/social-media"><span class="idx">03</span>Social Media</a>
+  <a class="menu-link" href="https://watmediallc.com/websites"><span class="idx">04</span>Websites</a>
+  <p class="menu-label">More</p>
+  <a class="menu-link" href="https://watmediallc.com/#how">Process</a>
+  <a class="menu-link" href="https://watmediallc.com/#founder">Meet Freddie</a>
+  <a class="menu-link" href="https://watmediallc.com/#faq">FAQ</a>
+  <a class="menu-link" href="https://watmediallc.com/contact">Contact</a>
+  <div class="menu-foot">
+    <a href="https://watmediallc.com/#claim" class="btn btn-primary btn-lg">Claim My Free Video →</a>
+    <span class="mono-line">Shenandoah Valley, VA · Booking now</span>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-hero contact-page-hero" data-hero>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="container" style="position:relative; z-index:2">
+    <div class="contact-grid">
+
+      <!-- Left: Headline + Info -->
+      <div class="contact-info reveal">
+        <p class="kicker" style="margin-bottom:18px"><span class="rec-dot"></span>Get in Touch</p>
+        <h1 style="margin-bottom:14px">Let's talk about your <span class="hl">business.</span></h1>
+        <p class="lead" style="margin-bottom:32px">Fill out the form and Freddie will personally reach out within one business day.</p>
+        <div class="contact-info-block">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          </div>
+          <div>
+            <div class="ci-label">Email</div>
+            <div class="ci-value"><a href="mailto:freddie@watmediallc.com">freddie@watmediallc.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div>
+            <div class="ci-label">Instagram</div>
+            <div class="ci-value"><a href="https://www.instagram.com/fr3ddie7/" target="_blank" rel="noopener noreferrer">@fr3ddie7</a></div>
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="ci-label">Location</div>
+            <div class="ci-value">Shenandoah Valley, VA<br><span style="font-weight:400;font-size:13px;color:var(--text-mut)">Harrisonburg · Staunton · Waynesboro</span></div>
+          </div>
+        </div>
+        <div class="contact-info-block">
+          <div class="ci-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="ci-label">Response Time</div>
+            <div class="ci-value">Within one business day</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-form-card reveal reveal-d1">
+        <div class="form-title">Send a message</div>
+        <div class="form-sub">No pitch, no pressure — just a conversation.</div>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your name</label>
+              <input type="text" id="f-name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="f-business">Business name</label>
+              <input type="text" id="f-business" name="business" placeholder="Valley Coffee Co." required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="f-phone">Phone (optional)</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="(540) 555-0100" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-service">I'm interested in</label>
+            <select id="f-service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="free-video">The free promo video</option>
+              <option value="meta-ads">Meta Ads (Facebook &amp; Instagram)</option>
+              <option value="social-media">Social Media Management</option>
+              <option value="websites">Website Design</option>
+              <option value="all">Everything — let's talk</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" placeholder="Tell me a bit about your business and what you're looking for…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg form-submit">Send Message →</button>
+          <p class="form-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Your info stays with us. Period.
+          </p>
+        </form>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3 style="margin-bottom:8px">Message sent!</h3>
+          <p style="color:var(--text-lo)">Freddie will be in touch within one business day.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="https://watmediallc.com" class="footer-logo-link">
+          <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="Wat Media">
+          <span>Wat Media</span>
+        </a>
+        <p class="footer-tagline">Video, ads, social &amp; websites for Shenandoah Valley businesses.</p>
+        <div class="footer-social-row">
+          <a href="https://www.instagram.com/fr3ddie7/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/freddie.watkins.33886" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.6l.4-3h-3V9.1c0-.9.3-1.5 1.6-1.5H16.7V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6v7h3Z"/></svg>
+          </a>
+          <a href="mailto:freddie@watmediallc.com" class="footer-social" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="https://watmediallc.com/videography">Videography</a>
+        <a href="https://watmediallc.com/meta-ads">Meta Ads</a>
+        <a href="https://watmediallc.com/social-media">Social Media</a>
+        <a href="https://watmediallc.com/websites">Websites</a>
+        <a href="https://watmediallc.com/#faq">FAQ</a>
+        <a href="https://watmediallc.com/contact">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wat Media LLC</span>
+      <span>Shenandoah Valley, VA</span>
+      <a href="mailto:freddie@watmediallc.com">freddie@watmediallc.com</a>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="complementary" aria-label="Claim your free video">
+  <p class="mc-label">Wat Media<strong>Let's talk</strong></p>
+  <a href="#contact-form" class="btn btn-primary">Send Message →</a>
+</div>
+
+<script src="assets/wat.js" defer></script>
+<script>
+(function() {
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success');
+  if (!form) return;
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    try {
+      // Replace with your Formspree endpoint: https://formspree.io/f/YOUR_FORM_ID
+      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        // Fire Meta Pixel Lead event
+        if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+        // Redirect to thank-you page
+        window.location.href = 'thank-you.html';
+      } else {
+        btn.textContent = 'Send Message →';
+        btn.disabled = false;
+        alert('Something went wrong. Please email freddie@watmediallc.com directly.');
+      }
+    } catch (err) {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email freddie@watmediallc.com directly.');
+    }
+  });
+})();
+</script>
+</body>
+</html>

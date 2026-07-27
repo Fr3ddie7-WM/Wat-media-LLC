@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Ads Management — Wat Media | Shenandoah Valley</title>
+<meta name="description" content="Facebook & Instagram ad campaigns built for Shenandoah Valley businesses. Wat Media handles the strategy, creative, targeting, and optimization. Get a free consultation.">
+<link rel="canonical" href="https://watmediallc.com/meta-ads">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meta Ads Management — Wat Media | Shenandoah Valley">
+<meta property="og:description" content="Facebook & Instagram ad campaigns built for Shenandoah Valley businesses. Strategy, creative, targeting, and optimization — all handled for you.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&h=630&q=80">
+<meta property="og:url" content="https://watmediallc.com/meta-ads.html">
+<meta property="og:site_name" content="Wat Media">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meta Ads Management — Wat Media | Shenandoah Valley">
+<meta name="twitter:description" content="Facebook & Instagram ad campaigns built for Shenandoah Valley businesses. Strategy, creative, targeting, and optimization — all handled for you.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&h=630&q=80">
+
+<!-- Favicon -->
+<link rel="icon" href="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" type="image/svg+xml">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Meta Ads Management",
+  "provider": { "@type": "LocalBusiness", "name": "Wat Media", "url": "https://watmediallc.com" },
+  "description": "Facebook and Instagram ad campaigns for Shenandoah Valley businesses. Strategy, creative, targeting, and ongoing optimization — fully managed.",
+  "areaServed": { "@type": "Place", "name": "Shenandoah Valley, Virginia" },
+  "url": "https://watmediallc.com/meta-ads"
+}
+</script>
+
+<style>
+/* ============================================================
+   TOKENS & RESET
+   ============================================================ */
+:root {
+  --blue:       #0055FE;
+  --blue-deep:  #0040C4;
+  --blue-glow:  rgba(0, 85, 254, 0.35);
+  --blue-light: rgba(0, 85, 254, 0.12);
+  --ink:        #06080F;
+  --black:      #020305;
+  --bg:         #F6F8FC;
+  --surface:    #FFFFFF;
+  --border:     rgba(6, 8, 15, 0.08);
+  --muted:      #6B7280;
+  --dark-card:  #0D1017;
+  --green:      #22C55E;
+
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+
+  --shadow-sm: 0 1px 3px rgba(6,8,15,.06), 0 1px 2px rgba(6,8,15,.04);
+  --shadow:    0 4px 16px rgba(6,8,15,.08), 0 1px 4px rgba(6,8,15,.04);
+  --shadow-lg: 0 12px 40px rgba(6,8,15,.12), 0 4px 12px rgba(6,8,15,.06);
+  --shadow-xl: 0 24px 64px rgba(6,8,15,.18), 0 8px 24px rgba(6,8,15,.08);
+  --shadow-blue: 0 8px 32px rgba(0,85,254,.28), 0 2px 8px rgba(0,85,254,.16);
+
+  --nav-h: 68px;
+  --section-pad: clamp(64px, 8vw, 112px);
+  --container: 1140px;
+  --gutter: clamp(20px, 4vw, 40px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+::selection { background: var(--blue); color: #fff; }
+
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--blue), #60A5FA);
+  z-index: 10000;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+.kicker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  padding: 5px 12px;
+  background: var(--blue-light);
+  border: 1px solid rgba(0,85,254,.18);
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(38px, 5.5vw, 68px); }
+h2 { font-size: clamp(30px, 4vw, 52px); }
+h3 { font-size: clamp(20px, 2.5vw, 28px); }
+
+.lead {
+  font-size: clamp(16px, 1.8vw, 19px);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 14px 26px;
+  border-radius: 100px;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #fff;
+  box-shadow: var(--shadow-blue);
+}
+.btn-primary:hover {
+  background: var(--blue-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,85,254,.38), 0 4px 12px rgba(0,85,254,.2);
+}
+.btn-lg { font-size: 17px; padding: 18px 34px; }
+
+.btn-ghost-light {
+  background: transparent;
+  color: rgba(255,255,255,.85);
+  border: 1.5px solid rgba(255,255,255,.2);
+}
+.btn-ghost-light:hover {
+  background: rgba(255,255,255,.08);
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,.35);
+  color: #fff;
+}
+
+.btn-white {
+  background: #fff;
+  color: var(--blue);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+.btn-white:hover {
+  background: rgba(255,255,255,.92);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0,0,0,.2);
+}
+
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
+#site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 900;
+  transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+#site-header.scrolled {
+  background: rgba(246,248,252,.88);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(6,8,15,.06);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  gap: 32px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.nav-logo img { height: 32px; width: auto; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background .18s, color .18s;
+  opacity: 0.72;
+}
+.nav-links a:hover { background: rgba(6,8,15,.06); opacity: 1; }
+.nav-links a.active { opacity: 1; background: var(--blue-light); color: var(--blue); }
+
+.nav-badge {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #15803D;
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  padding: 6px 13px;
+  border-radius: 100px;
+  flex-shrink: 0;
+}
+
+.pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  position: relative;
+  flex-shrink: 0;
+}
+.pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 2px solid var(--green);
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(.7); opacity: .8; }
+  70%  { transform: scale(1.4); opacity: 0; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.nav-cta { margin-left: 10px; }
+
+/* NAV DROPDOWN */
+.nav-dropdown { position: relative; }
+.nav-dropdown-btn { display: flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 600; font-family: inherit; color: var(--ink); padding: 8px 14px; border-radius: 8px; transition: background .18s, color .18s; opacity: 0.72; cursor: pointer; background: none; border: none; }
+.nav-dropdown-btn:hover, .nav-dropdown-btn.open { background: rgba(6,8,15,.06); opacity: 1; }
+.nav-dd-chevron { width: 12px; height: 12px; transition: transform .22s ease; flex-shrink: 0; }
+.nav-dropdown-btn.open .nav-dd-chevron { transform: rotate(180deg); }
+.nav-dd-menu { position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(-8px); background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: 0 20px 56px rgba(6,8,15,.14), 0 4px 16px rgba(6,8,15,.08); padding: 8px; min-width: 268px; opacity: 0; pointer-events: none; transition: opacity .2s ease, transform .2s ease; z-index: 200; }
+.nav-dd-menu.open { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0); }
+@media (hover: hover) { .nav-dropdown:hover .nav-dd-menu { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(0); } .nav-dropdown:hover .nav-dropdown-btn { background: rgba(6,8,15,.06); opacity: 1; } .nav-dropdown:hover .nav-dd-chevron { transform: rotate(180deg); } }
+.nav-dd-item { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: var(--radius-sm); color: var(--ink); transition: background .15s; text-decoration: none; }
+.nav-dd-item:hover { background: var(--bg); }
+.nav-dd-item:hover .nav-dd-label { color: var(--blue); }
+.nav-dd-icon { width: 36px; height: 36px; border-radius: 9px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.nav-dd-icon svg { width: 17px; height: 17px; color: var(--blue); }
+.nav-dd-label { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.2; transition: color .15s; }
+.nav-dd-sub { font-size: 11px; color: var(--muted); font-weight: 500; margin-top: 2px; }
+.nav-dd-divider { height: 1px; background: var(--border); margin: 6px 8px; }
+.mobile-nav-section { font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  margin-left: auto;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  transition: background .18s;
+  flex-shrink: 0;
+}
+.hamburger:hover { background: rgba(6,8,15,.06); }
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform .3s ease, opacity .3s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+#mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: rgba(246,248,252,.97);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+#mobile-nav.open { opacity: 1; pointer-events: all; }
+#mobile-nav a {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 6vw, 42px);
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  padding: 10px 24px;
+  border-radius: var(--radius);
+  transition: background .18s, color .18s;
+}
+#mobile-nav a:hover { background: var(--blue-light); color: var(--blue); }
+#mobile-nav .mobile-nav-cta { margin-top: 20px; }
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: .1s; }
+.reveal.d2 { transition-delay: .2s; }
+.reveal.d3 { transition-delay: .3s; }
+.reveal.d4 { transition-delay: .4s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .pulse-dot::after { animation: none; }
+}
+
+/* ============================================================
+   SECTION COMMONS
+   ============================================================ */
+.section { padding: var(--section-pad) 0; }
+.section-header { margin-bottom: clamp(40px, 5vw, 64px); }
+.section-header.center { text-align: center; }
+.section-header h2 { margin-bottom: 16px; }
+
+/* ============================================================
+   HERO — SPLIT LAYOUT
+   ============================================================ */
+#hero { background: var(--dark-card); min-height: 100svh; display: flex; align-items: center; padding-top: calc(var(--nav-h) + 60px); padding-bottom: 80px; position: relative; overflow: hidden; }
+#hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 90% at 8% 45%, rgba(0,85,254,.22) 0%, transparent 55%), radial-gradient(ellipse 55% 60% at 92% 8%, rgba(96,165,250,.09) 0%, transparent 50%), radial-gradient(ellipse 45% 55% at 78% 92%, rgba(0,85,254,.08) 0%, transparent 55%); pointer-events: none; }
+#hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px); background-size: 64px 64px; pointer-events: none; z-index: 0; }
+.hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; width: 100%; }
+.hero-kicker { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); padding: 5px 12px; background: rgba(0,85,254,.15); border: 1px solid rgba(0,85,254,.3); border-radius: 100px; margin-bottom: 28px; }
+.hero-h1 { color: #fff; margin-bottom: 24px; }
+.hero-lead { color: rgba(255,255,255,.6); margin-bottom: 40px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 12px; }
+.stat-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: rgba(255,255,255,.75); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); padding: 8px 16px; border-radius: 100px; }
+.stat-badge svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
+
+/* HERO VISUAL */
+.hero-visual { position: relative; }
+.hero-img-wrap { border-radius: 20px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.07); position: relative; }
+.hero-img-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0.88) brightness(0.92); display: block; }
+.hero-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg, transparent 45%, rgba(13,16,23,.75) 100%); border-radius: 20px; pointer-events: none; }
+.hero-badge { position: absolute; display: flex; align-items: center; gap: 9px; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: #fff; background: rgba(13,16,23,.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 12px 18px; box-shadow: 0 10px 40px rgba(0,0,0,.45); white-space: nowrap; z-index: 3; }
+.hero-badge svg { flex-shrink: 0; }
+.hero-badge-br { bottom: -22px; left: -28px; }
+.hero-badge-tr { top: 22%; right: -28px; }
+
+/* ============================================================
+   FEATURE CARD IMAGES
+   ============================================================ */
+.feature-card-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  margin-bottom: 0;
+}
+.feature-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.7) brightness(0.9);
+  transition: transform 0.5s ease, filter 0.4s;
+}
+.feature-card:hover .feature-card-img img {
+  transform: scale(1.04);
+  filter: saturate(0.9) brightness(0.95);
+}
+
+/* ============================================================
+   FEATURE CARDS
+   ============================================================ */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.feature-card-body { padding: 32px 28px; }
+.feature-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.feature-icon svg { width: 26px; height: 26px; color: var(--blue); }
+.feature-card h3 { margin-bottom: 12px; }
+.feature-card p { font-size: 15px; color: var(--muted); line-height: 1.65; }
+
+/* ============================================================
+   WHY SECTION — two-col
+   ============================================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.results-card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  box-shadow: var(--shadow-xl);
+}
+.results-card-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: 28px;
+}
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.result-item {
+  background: rgba(0,85,254,.08);
+  border: 1px solid rgba(0,85,254,.18);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+}
+.result-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--blue);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.result-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.45);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.result-item.green .result-number { color: #22C55E; }
+.result-item.green { background: rgba(34,197,94,.06); border-color: rgba(34,197,94,.18); }
+
+/* ============================================================
+   CHECKLIST SECTION
+   ============================================================ */
+.checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 720px;
+  margin-inline: auto;
+}
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.check-item svg { width: 18px; height: 18px; color: var(--blue); flex-shrink: 0; }
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.section-cta {
+  background: var(--blue);
+  text-align: center;
+  padding: var(--section-pad) 0;
+}
+.section-cta h2 { color: #fff; margin-bottom: 16px; }
+.section-cta p {
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: 36px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+#footer {
+  background: var(--black);
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 48px 0 36px;
+  position: relative;
+  overflow: hidden;
+}
+.footer-wordmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.04;
+  white-space: nowrap;
+}
+.footer-wordmark img { height: clamp(80px, 12vw, 160px); width: auto; display: block; }
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.footer-left { display: flex; flex-direction: column; gap: 6px; }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,.35); }
+.footer-center { display: flex; align-items: center; gap: 16px; }
+.footer-social {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.6);
+  transition: background .2s, color .2s, border-color .2s;
+}
+.footer-social:hover { background: rgba(0,85,254,.2); border-color: rgba(0,85,254,.4); color: var(--blue); }
+.footer-social svg { width: 18px; height: 18px; }
+.footer-right { text-align: right; }
+.footer-tagline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .04em;
+}
+.footer-email-link { color: rgba(255,255,255,.5); transition: color .2s ease; }
+.footer-email-link:hover { color: var(--blue); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 920px) {
+  .nav-links, .nav-badge, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hero-visual { order: -1; max-width: 480px; margin-inline: auto; }
+  .hero-badge-br, .hero-badge-tr { display: none; }
+  .hero-ctas { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .checklist-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-right { text-align: center; }
+  .footer-center { justify-content: center; }
+}
+@media (max-width: 600px) {
+  h1 { font-size: clamp(32px, 9vw, 48px); }
+  h2 { font-size: clamp(26px, 7vw, 38px); }
+  .results-grid { grid-template-columns: 1fr; }
+  .hero-ctas { flex-direction: column; align-items: center; }
+}
+
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<div id="scroll-progress" role="progressbar" aria-label="Reading progress"></div>
+
+<!-- NAV -->
+<header id="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Wat Media — home">
+        <img src="Wat_Media_Exact_Logo_Package/wat_media_logo_without_tagline.svg" alt="Wat Media" height="32">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#how">Process</a></li>
+        <li class="nav-dropdown">
+          <button class="nav-dropdown-btn" id="services-dd-btn" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg class="nav-dd-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dd-menu" id="services-dd-menu" role="menu">
+            <a href="videography.html" class="nav-dd-item" role="menuitem">
+              <div class="nav-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+              <div><div class="nav-dd-label">Videography</div><div class="nav-dd-sub">Free first promo video</div></div>
+            </a>
+            <a href="meta-ads.html" class="nav-dd-item" role="menuitem">
+              <div class="nav-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+              <div><div class="nav-dd-label">Meta Ads</div><div class="nav-dd-sub">Facebook &amp; Instagram campaigns</div></div>
+            </a>
+            <a href="social-media.html" class="nav-dd-item" role="menuitem">
+              <div class="nav-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg></div>
+              <div><div class="nav-dd-label">Social Media</div><div class="nav-dd-sub">Instagram, Facebook &amp; TikTok</div></div>
+            </a>
+            <div class="nav-dd-divider" aria-hidden="true"></div>
+            <a href="websites.html" class="nav-dd-item" role="menuitem">
+              <div class="nav-dd-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+              <div><div class="nav-dd-label">Website Design</div><div class="nav-dd-sub">Hand-coded, starting at $499</div></div>
+            </a>
+          </div>
+        </li>
+        <li><a href="index.html#founder">Meet Freddie</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-badge" aria-label="Currently booking">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        Booking shoots now
+      </div>
+      <a href="index.html#claim" class="btn btn-primary nav-cta">Claim Free Video</a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div id="mobile-nav" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <a href="index.html#how" class="mobile-nav-link">Process</a>
+  <span class="mobile-nav-section">Services</span>
+  <a href="videography.html" class="mobile-nav-link">Videography</a>
+  <a href="meta-ads.html" class="mobile-nav-link">Meta Ads</a>
+  <a href="social-media.html" class="mobile-nav-link">Social Media</a>
+  <a href="websites.html" class="mobile-nav-link">Websites</a>
+  <a href="index.html#founder" class="mobile-nav-link">Meet Freddie</a>
+  <a href="index.html#faq" class="mobile-nav-link">FAQ</a>
+  <a href="index.html#claim" class="btn btn-primary mobile-nav-cta">Claim Free Video</a>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-label="Meta Ads hero">
+  <div class="container">
+    <div class="hero-inner">
+      <!-- Left: text -->
+      <div class="hero-content">
+        <div class="hero-kicker reveal">02 Meta Ads</div>
+        <h1 class="hero-h1 reveal d1">Turn views into customers.</h1>
+        <p class="lead hero-lead reveal d2">
+          Facebook &amp; Instagram ad campaigns built for Shenandoah Valley businesses. We handle the strategy, creative, targeting, and optimization.
+        </p>
+        <div class="hero-ctas reveal d2">
+          <a href="index.html#claim" class="btn btn-primary btn-lg">Get a Free Consultation →</a>
+          <a href="#what-we-manage" class="btn btn-ghost-light">See What's Included ↓</a>
+        </div>
+        <div class="hero-stats reveal d3">
+          <span class="stat-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Facebook &amp; Instagram
+          </span>
+          <span class="stat-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Local Targeting
+          </span>
+          <span class="stat-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Monthly Reporting
+          </span>
+        </div>
+      </div>
+      <!-- Right: featured image -->
+      <div class="hero-visual reveal d2">
+        <div class="hero-img-wrap">
+          <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=700&h=875&q=85" alt="Meta Ads management">
+        </div>
+        <div class="hero-badge hero-badge-br">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          3.2x ROAS Average
+        </div>
+        <div class="hero-badge hero-badge-tr">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2.5" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+          47% Lower Cost Per Lead
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE MANAGE -->
+<section id="what-we-manage" class="section" aria-labelledby="manage-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="kicker">Full Service</span>
+      <h2 id="manage-heading">We handle everything.</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card reveal d1">
+        <div class="feature-card-img"><img src="https://images.unsplash.com/photo-1553484771-371a605b060b?auto=format&fit=crop&w=600&h=340&q=80" alt="Meta ads campaign strategy dashboard"></div>
+        <div class="feature-card-body">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <h3>Campaign Strategy</h3>
+        <p>We build campaigns around your actual business goals, not vanity metrics. Every dollar of ad spend is accounted for and optimized.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal d2">
+        <div class="feature-card-img"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&h=340&q=80" alt="Ad creative and copywriting for Facebook and Instagram"></div>
+        <div class="feature-card-body">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+        </div>
+        <h3>Creative &amp; Copy</h3>
+        <p>Ads that use your Wat Media video content for maximum engagement and trust. We write the copy, design the assets, and handle all creative production.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal d3">
+        <div class="feature-card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=340&q=80" alt="Audience targeting and retargeting analytics for Meta ads"></div>
+        <div class="feature-card-body">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3>Targeting &amp; Retargeting</h3>
+        <p>Reach the right people in the Shenandoah Valley and beyond. We build custom audiences, lookalikes, and retargeting funnels that actually convert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY META ADS -->
+<section class="section" style="background: var(--surface);" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="two-col">
+      <div class="reveal">
+        <span class="kicker">Why It Works</span>
+        <h2 id="why-heading" style="margin-bottom: 20px;">The most powerful local ad platform on earth.</h2>
+        <p style="font-size: 16px; color: var(--muted); line-height: 1.75; margin-bottom: 20px;">Meta reaches over 3 billion people — and with hyper-local targeting, you can put your business in front of exactly the right customers in your area. Video ads outperform static images by 3x in engagement, which is why our clients' promo videos become their best-performing ad creative.</p>
+        <p style="font-size: 16px; color: var(--muted); line-height: 1.75;">We combine your real video content with data-driven targeting to build campaigns that consistently bring in new customers — not just impressions.</p>
+      </div>
+
+      <div class="reveal d1">
+        <div class="results-card" aria-label="Example campaign results">
+          <div class="results-card-title">Example Campaign Results</div>
+          <div class="results-grid">
+            <div class="result-item">
+              <div class="result-number">3.2x</div>
+              <div class="result-label">ROAS</div>
+            </div>
+            <div class="result-item green">
+              <div class="result-number">47%</div>
+              <div class="result-label">Lower CPL</div>
+            </div>
+            <div class="result-item green">
+              <div class="result-number">2.1k</div>
+              <div class="result-label">Monthly Reach</div>
+            </div>
+            <div class="result-item">
+              <div class="result-number">4.8%</div>
+              <div class="result-label">Click-Through Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="section" aria-labelledby="included-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="kicker">Every Month</span>
+      <h2 id="included-heading">No surprises. Just results.</h2>
+    </div>
+    <div class="checklist-grid reveal d1">
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Campaign setup &amp; pixel install
+      </div>
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Custom audience creation
+      </div>
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        A/B creative testing
+      </div>
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Weekly performance monitoring
+      </div>
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Monthly results report
+      </div>
+      <div class="check-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Strategy calls
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-cta" aria-label="Call to action">
+  <div class="container">
+    <h2 class="reveal">Let's build your first campaign.</h2>
+    <p class="reveal d1">Tell us about your business and we'll put together a plan that actually drives results.</p>
+    <a href="index.html#claim" class="btn btn-white btn-lg reveal d2">Get a Free Consultation →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-wordmark" aria-hidden="true"><img src="Wat_Media_Exact_Logo_Package/wat_media_logo_with_tagline.svg" alt=""></div>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <p class="footer-copy">© <span id="footer-year">2026</span> Wat Media · Shenandoah Valley, VA</p>
+        <p class="footer-copy"><a href="mailto:hello@watmediallc.com" class="footer-email-link">hello@watmediallc.com</a></p>
+      </div>
+      <div class="footer-center">
+        <a href="https://www.instagram.com/fr3ddie7/" class="footer-social" aria-label="Follow on Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/freddie.watkins.33886" class="footer-social" aria-label="Follow on Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+      </div>
+      <div class="footer-right"><p class="footer-tagline">Reach. Engage. Grow.</p></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  const progressBar = document.getElementById('scroll-progress');
+  const header = document.getElementById('site-header');
+  function updateProgress() {
+    const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = Math.min(pct, 100) + '%';
+  }
+  function updateHeader() { header.classList.toggle('scrolled', window.scrollY > 20); }
+  let ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) { requestAnimationFrame(function () { updateProgress(); updateHeader(); ticking = false; }); ticking = true; }
+  }, { passive: true });
+  updateHeader(); updateProgress();
+
+  const hamburger = document.getElementById('hamburger-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  let menuOpen = false;
+  function openMenu() { menuOpen = true; hamburger.classList.add('open'); mobileNav.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+  function closeMenu() { menuOpen = false; hamburger.classList.remove('open'); mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  hamburger.addEventListener('click', function () { menuOpen ? closeMenu() : openMenu(); });
+  mobileNav.querySelectorAll('a').forEach(function (l) { l.addEventListener('click', closeMenu); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menuOpen) closeMenu(); });
+
+  var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  var yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* Services dropdown */
+  var ddBtn = document.getElementById('services-dd-btn');
+  var ddMenu = document.getElementById('services-dd-menu');
+  if (ddBtn && ddMenu) {
+    function closeDd() { ddBtn.classList.remove('open'); ddMenu.classList.remove('open'); ddBtn.setAttribute('aria-expanded','false'); }
+    function openDd()  { ddBtn.classList.add('open');    ddMenu.classList.add('open');    ddBtn.setAttribute('aria-expanded','true'); }
+    ddBtn.addEventListener('click', function(e) {
+      ddMenu.classList.contains('open') ? closeDd() : openDd();
+      e.stopPropagation();
+    });
+    document.addEventListener('click', function(e) {
+      if (!ddBtn.closest('.nav-dropdown').contains(e.target)) closeDd();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeDd(); });
+  }
+})();
+</script>
+</body>
+</html>
