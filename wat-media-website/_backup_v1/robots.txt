@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://watmediallc.com/sitemap.xml
