@@ -28,7 +28,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -36,7 +36,7 @@
   "@type": ["LocalBusiness", "ProfessionalService", "VideoProductionCompany"],
   "name": "Wat Media",
   "url": "https://watmediallc.com",
-  "email": "freddie@watmediallc.com",
+  "email": "hello@watmediallc.com",
   "logo": "https://watmediallc.com/Wat_Media_Exact_Logo_Package/wat_media_logo_without_tagline.svg",
   "description": "Videography, Meta Ads management, social media management, and custom website design for Shenandoah Valley businesses.",
   "areaServed": [
@@ -148,8 +148,8 @@
   --green:      #22C55E;
   --red:        #EF4444;
 
-  --font-display: 'Nunito Sans', system-ui, sans-serif;
-  --font-body:    'Mulish', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
   --font-script:  'Caveat', cursive;
 
   --radius-sm: 8px;
@@ -565,12 +565,11 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 .hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(32px, 4vw, 56px);
+  gap: clamp(40px, 6vw, 80px);
   align-items: center;
 }
 
-.hero-left { position: relative; z-index: 1; min-width: 0; }
-.hero-right { min-width: 0; }
+.hero-left { position: relative; z-index: 1; }
 
 .hero-eyebrow {
   display: inline-flex;
@@ -588,7 +587,7 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
 }
 .hero-eyebrow svg { width: 14px; height: 14px; color: var(--blue); }
 
-.hero-headline { margin-bottom: 22px; color: var(--ink); font-size: clamp(28px, 3vw, 42px); overflow-wrap: break-word; }
+.hero-headline { margin-bottom: 22px; color: var(--ink); }
 
 .hero-headline .underline-anim {
   position: relative;
@@ -645,9 +644,8 @@ h3 { font-size: clamp(20px, 2.5vw, 28px); }
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   z-index: 1;
-  padding: 20px 16px 28px 16px;
 }
 
 .hero-card-wrap {
@@ -1761,75 +1759,84 @@ details[open] .faq-chevron { transform: rotate(180deg); }
    FOOTER
    ============================================================ */
 #footer {
+  background: var(--black);
   border-top: 1px solid rgba(255,255,255,.06);
-  padding: clamp(48px, 7vw, 80px) 0 40px;
-  background: radial-gradient(900px 400px at 85% 0%, rgba(0,85,254,.12), transparent 65%), var(--black);
-  color: #fff;
+  padding: 48px 0 36px;
+  position: relative;
+  overflow: hidden;
 }
-.footer-top {
+
+.footer-wordmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.04;
+  white-space: nowrap;
+}
+.footer-wordmark img { height: clamp(80px, 12vw, 160px); width: auto; display: block; }
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(32px, 5vw, 56px);
-  padding-bottom: 36px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-  align-items: start;
-}
-@media (min-width: 640px) { .footer-top { grid-template-columns: 1fr 1fr; } }
-.footer-logo-link {
-  display: inline-flex;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
   align-items: center;
-  gap: 10px;
-  color: #fff;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,.35);
+}
+
+.footer-center {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.6);
+  transition: background .2s, color .2s, border-color .2s;
+}
+.footer-social:hover {
+  background: rgba(0,85,254,.2);
+  border-color: rgba(0,85,254,.4);
+  color: var(--blue);
+}
+.footer-social svg { width: 18px; height: 18px; }
+
+.footer-right {
+  text-align: right;
+}
+.footer-tagline {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 14px;
-  text-decoration: none;
-}
-.footer-logo-link img { height: 24px; width: auto; }
-.footer-tagline {
   font-size: 14px;
-  color: rgba(255,255,255,.45);
-  line-height: 1.65;
-  max-width: 36ch;
-  margin-bottom: 22px;
+  color: rgba(255,255,255,.35);
+  letter-spacing: .04em;
 }
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  align-content: flex-start;
+
+.footer-email-link {
+  color: rgba(255,255,255,.5);
+  transition: color .2s ease;
 }
-.footer-nav a {
-  font-size: 14px;
-  color: rgba(255,255,255,.45);
-  transition: color .2s;
-}
-.footer-nav a:hover { color: #fff; }
-.footer-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 24px;
-  padding-top: 28px;
-  font-size: 11px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.28);
-}
-.footer-bottom a { color: inherit; transition: color .2s; }
-.footer-bottom a:hover { color: rgba(255,255,255,.6); }
-.footer-social-row { display: flex; gap: 10px; margin-top: 4px; }
-.footer-social {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.12);
-  display: grid;
-  place-items: center;
-  color: rgba(255,255,255,.45);
-  transition: all .2s ease;
-}
-.footer-social:hover { color: #fff; border-color: var(--blue); background: rgba(0,85,254,.2); transform: translateY(-2px); }
-.footer-social svg { width: 18px; height: 18px; }
+.footer-email-link:hover { color: var(--blue); }
 
 /* ============================================================
    MOBILE STICKY CTA
@@ -1889,6 +1896,10 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 
   .claim-inner { grid-template-columns: 1fr; }
 
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-right { text-align: center; }
+  .footer-center { justify-content: center; }
+
   #mobile-cta-bar { display: block; }
 }
 
@@ -1945,7 +1956,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   padding: 2.5px;
   overflow: hidden;
   width: 100%;
-  max-width: 520px;
+  max-width: 488px;
   z-index: 1;
   box-shadow:
     0 40px 100px rgba(0,0,0,.13),
@@ -1981,7 +1992,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   z-index: 1;
   background: #FFFFFF;
   border-radius: 22px;
-  padding: 20px 20px 16px;
+  padding: 24px 24px 20px;
 }
 
 /* ── Dashboard header ── */
@@ -2054,27 +2065,26 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   background: #F8FAFF;
   border: 1px solid rgba(0,85,254,.08);
   border-radius: 12px;
-  padding: 12px 14px;
+  padding: 14px 16px;
   transition: background .2s, border-color .2s;
 }
 .dash-metric-card:hover { background: rgba(0,85,254,.04); border-color: rgba(0,85,254,.16); }
 .dash-metric-label {
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: .04em;
+  letter-spacing: .09em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 6px;
-  white-space: nowrap;
 }
 .dash-metric-value {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--ink);
   letter-spacing: -0.03em;
   line-height: 1;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 .dash-metric-change {
   font-size: 11px;
@@ -2176,16 +2186,10 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   to   { opacity: 1; transform: scale(1) translateY(0); }
 }
 .dash-notif-emoji {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: var(--blue-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 20px;
+  line-height: 1;
   flex-shrink: 0;
 }
-.dash-notif-emoji svg { width: 16px; height: 16px; color: var(--blue); }
 .dash-notif-title {
   font-family: var(--font-display);
   font-size: 12px;
@@ -2226,51 +2230,6 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   .dash-notif { bottom: -10px; right: -10px; }
   .dash-badge-tl { top: -10px; left: -10px; }
 }
-
-/* ── Offer Stack Section ── */
-#offer-stack { background: var(--dark-card); padding: var(--section-pad) 0; }
-.offer-stack-inner { max-width: 780px; margin: 0 auto; }
-#offer-stack .kicker { color: var(--gold); background: rgba(245,158,11,.12); border-color: rgba(245,158,11,.22); }
-#offer-stack h2 { color: #fff; margin-bottom: 14px; }
-#offer-stack .section-header p { color: rgba(255,255,255,.55); font-size: 18px; margin-bottom: 48px; }
-.stack-list { display: flex; flex-direction: column; gap: 0; border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 36px; }
-.stack-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 28px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02); }
-.stack-row:last-child { border-bottom: none; }
-.stack-row:hover { background: rgba(255,255,255,.04); }
-.stack-item-name { font-size: 16px; font-weight: 600; color: rgba(255,255,255,.88); display: flex; align-items: center; gap: 12px; }
-.stack-item-name svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
-.stack-item-price { font-family: var(--font-display); font-weight: 700; font-size: 15px; color: rgba(255,255,255,.4); text-decoration: line-through; white-space: nowrap; }
-.stack-total { background: rgba(0,85,254,.12); border: 1px solid rgba(0,85,254,.22); border-radius: var(--radius); padding: 24px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.stack-total-label { font-family: var(--font-display); font-weight: 800; font-size: 18px; color: rgba(255,255,255,.9); }
-.stack-total-value { text-align: right; }
-.stack-total-strike { font-size: 15px; color: rgba(255,255,255,.35); text-decoration: line-through; margin-bottom: 2px; }
-.stack-total-price { font-family: var(--font-display); font-weight: 800; font-size: 36px; color: var(--green); letter-spacing: -0.03em; line-height: 1; }
-.stack-total-price span { font-size: 14px; font-weight: 600; letter-spacing: 0; margin-left: 4px; }
-
-/* ── Who It's For Section ── */
-#who { background: var(--bg); }
-.who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
-.who-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; transition: transform .22s ease, box-shadow .22s ease; }
-.who-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-.who-card-icon { width: 42px; height: 42px; border-radius: 12px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; flex-shrink: 0; }
-.who-card-icon svg { width: 20px; height: 20px; color: var(--blue); }
-.who-card-label { font-family: var(--font-display); font-weight: 800; font-size: 17px; color: var(--ink); margin-bottom: 6px; }
-.who-card-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
-.who-bottom { margin-top: 36px; background: var(--blue-light); border: 1px solid rgba(0,85,254,.2); border-radius: var(--radius-lg); padding: 28px 32px; }
-.who-bottom p { font-size: 17px; color: var(--ink); line-height: 1.65; }
-.who-bottom strong { color: var(--blue); }
-@media (max-width: 640px) { .who-grid { grid-template-columns: 1fr; } }
-
-/* ── Guarantee callout in claim section ── */
-.guarantee-callout { display: flex; align-items: flex-start; gap: 14px; background: rgba(34,197,94,.06); border: 1px solid rgba(34,197,94,.2); border-radius: var(--radius); padding: 18px 22px; margin-top: 28px; }
-.guarantee-callout svg { width: 22px; height: 22px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
-.guarantee-callout p { font-size: 14px; color: rgba(255,255,255,.75); line-height: 1.55; }
-.guarantee-callout strong { color: rgba(255,255,255,.92); display: block; margin-bottom: 3px; font-size: 15px; }
-
-/* ── Scarcity badge ── */
-.scarcity-note { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); margin-top: 16px; }
-.scarcity-note::before { content: ""; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
-
 </style>
 
   <!-- Google tag (gtag.js) -->
@@ -2295,8 +2254,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   <div class="container">
     <nav class="nav-inner" aria-label="Main navigation">
       <a href="#" class="nav-logo" aria-label="Wat Media — home">
-        <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="" height="30">
-        <span>Wat Media</span>
+        <img src="Wat_Media_Exact_Logo_Package/wat_media_logo_without_tagline.svg" alt="Wat Media" height="32">
       </a>
 
       <ul class="nav-links" role="list">
@@ -2372,38 +2330,39 @@ details[open] .faq-chevron { transform: rotate(180deg); }
       <div class="hero-left">
         <div class="hero-eyebrow reveal">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Shenandoah Valley, VA · ★★★★★ 5.0 from local businesses
+          Shenandoah Valley, VA &nbsp;·&nbsp; 4 Services, 1 Team
         </div>
 
         <h1 class="hero-headline reveal d1">
-          Your first professional promo video — <span class="underline-anim">completely free.</span>
+          More customers.<br>
+          One <span class="underline-anim">local team.</span>
         </h1>
 
         <p class="lead hero-lead reveal d2">
-          We show up to your business with $50,000+ in pro gear, shoot it, edit it, and hand it over. No contract. No invoice. No catch. We prove what we can do before you spend a dollar.
+          Video production, Meta ads, social media management, and custom websites — everything your business needs to grow online, all from one team that actually knows your community.
         </p>
 
         <div class="hero-ctas reveal d2">
-          <a href="#claim" class="btn btn-primary btn-lg">
-            Get My Free Video →
+          <a href="#services" class="btn btn-primary btn-lg">
+            Explore Our Services →
           </a>
-          <a href="#how" class="btn btn-ghost">
-            See how it works ↓
+          <a href="#claim" class="btn btn-ghost">
+            Claim Free Video
           </a>
         </div>
 
         <div class="hero-trust reveal d3" role="list" aria-label="Trust indicators">
           <div class="trust-badge" role="listitem">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Reshoot guarantee — we fix it if you're not thrilled
+            Free first video
           </div>
           <div class="trust-badge" role="listitem">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Delivered in 7–14 days
+            No long-term contracts
           </div>
           <div class="trust-badge" role="listitem">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            3–5 shoots per month — limited spots
+            100% local
           </div>
         </div>
       </div>
@@ -2512,7 +2471,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 
         <!-- Floating notification pop -->
         <div class="dash-notif" role="status" aria-label="New lead notification">
-          <div class="dash-notif-emoji" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/><path d="M5 17l.75 2.25L8 20l-2.25.75L5 23l-.75-2.25L2 20l2.25-.75L5 17z"/><path d="M19 3l.5 1.5L21 5l-1.5.5L19 7l-.5-1.5L17 5l1.5-.5L19 3z"/></svg></div>
+          <div class="dash-notif-emoji" aria-hidden="true">🎉</div>
           <div>
             <div class="dash-notif-title">New lead via Meta Ads</div>
             <div class="dash-notif-sub">Valley Coffee Co. · Just now</div>
@@ -2544,6 +2503,209 @@ details[open] .faq-chevron { transform: rotate(180deg); }
   </div>
 </div>
 
+<!-- ============================================================
+     PROCESS SECTION
+     ============================================================ -->
+<section id="how" class="section" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="kicker">01 The process</span>
+      <h2 id="process-heading">From "never heard of you"<br>to "where do I sign?"</h2>
+    </div>
+
+    <div class="process-grid">
+      <!-- Step 1 -->
+      <div class="process-card reveal d1">
+        <div class="step-num">Step 01</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3>Book a quick call</h3>
+        <p class="process-label">15 minutes, zero fluff</p>
+        <p class="process-detail">Tell us about your business, your goals, and what you'd love customers to see. We handle everything from there.</p>
+      </div>
+
+      <!-- Step 2 — FEATURED -->
+      <div class="process-card featured reveal d2">
+        <div class="process-card-badge">The free part</div>
+        <div class="step-num">Step 02</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+        </div>
+        <h3>We shoot your promo video</h3>
+        <p class="process-label">Shot, edited & delivered</p>
+        <p class="process-detail">We show up with pro gear, shoot cinematic footage, edit it to a polished promo, and hand it over. The video is yours to keep, forever.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-card reveal d3">
+        <div class="step-num">Step 03</div>
+        <div class="process-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>You decide what's next</h3>
+        <p class="process-label">Zero obligation</p>
+        <p class="process-detail">Love the video? We can run ads, manage your social, and grow your reach. Not ready? No hard feelings. The video's still yours.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section id="services" class="section" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="kicker">02 What we do</span>
+      <h2 id="services-heading">Video gets you noticed.<br>The system gets you customers.</h2>
+    </div>
+
+    <div class="services-layout">
+      <!-- Featured: Videography -->
+      <div class="service-featured reveal">
+        <div class="sf-left">
+          <div class="sf-badge" aria-label="Start here — it's free">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            Start here — it's free
+          </div>
+          <h3>Videography</h3>
+          <p class="lead">Cinematic content that actually stops the scroll. Your first promo video is on us — because seeing is believing.</p>
+          <ul class="sf-list" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Promo & brand films
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Short-form content for Reels & TikTok
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Event & product shoots
+            </li>
+          </ul>
+          <a href="#claim" class="btn btn-primary">Claim the free shoot →</a>
+          <a href="videography.html" class="btn btn-ghost" style="margin-top:8px;">Learn More →</a>
+        </div>
+
+        <!-- Reel UI (decorative) -->
+        <div class="reel-ui" aria-hidden="true">
+          <div class="reel-header">
+            <span class="reel-title">Now editing</span>
+            <span class="reel-live"><span></span> Live</span>
+          </div>
+          <div class="reel-track">
+            <div class="reel-item">
+              <div class="reel-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <div class="reel-info">
+                <div class="reel-name">Interstate Bowl — Promo</div>
+                <div class="reel-bar-wrap"><div class="reel-bar" style="width:78%"></div></div>
+              </div>
+            </div>
+            <div class="reel-item">
+              <div class="reel-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <div class="reel-info">
+                <div class="reel-name">Duck Butter Farm — Spring</div>
+                <div class="reel-bar-wrap"><div class="reel-bar" style="width:54%"></div></div>
+              </div>
+            </div>
+            <div class="reel-item">
+              <div class="reel-thumb">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <div class="reel-info">
+                <div class="reel-name">Gilliams — Before &amp; After</div>
+                <div class="reel-bar-wrap"><div class="reel-bar" style="width:32%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service grid -->
+      <div class="service-grid">
+        <!-- Paid Ads -->
+        <div class="service-card reveal d1">
+          <div class="sc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3>Meta Ads</h3>
+          <p class="lead">Turn your video into a lead machine on Facebook &amp; Instagram.</p>
+          <ul class="sc-list" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Facebook &amp; Instagram ad campaigns
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Audience targeting &amp; retargeting
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Monthly reporting & optimization
+            </li>
+          </ul>
+          <a href="meta-ads.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="service-card reveal d2">
+          <div class="sc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <h3>Social Media Management</h3>
+          <p class="lead">Consistent, on-brand content that keeps you top of mind.</p>
+          <ul class="sc-list" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Content calendar &amp; scheduling
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Short-form video &amp; graphics
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Community engagement &amp; growth
+            </li>
+          </ul>
+          <a href="social-media.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
+        </div>
+
+        <!-- Websites -->
+        <div class="service-card reveal d3">
+          <div class="sc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Website Design</h3>
+          <p class="lead">Custom websites that look like $10k and convert like a sales machine.</p>
+          <ul class="sc-list" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Custom design — no templates
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Mobile-first &amp; fast-loading
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Built to rank on Google
+            </li>
+          </ul>
+          <a href="websites.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ============================================================
      TESTIMONIALS
@@ -2551,8 +2713,8 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 <section id="testimonials" class="section" aria-labelledby="testimonials-heading">
   <div class="container">
     <div class="section-header center reveal">
-      <span class="kicker">What local businesses say</span>
-      <h2 id="testimonials-heading">Real results. Real businesses. Real names.</h2>
+      <span class="kicker">From the Valley</span>
+      <h2 id="testimonials-heading">Don't take our word for it.</h2>
     </div>
 
     <div class="testimonials-grid">
@@ -2616,325 +2778,6 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 </section>
 
 <!-- ============================================================
-     OFFER STACK SECTION
-     ============================================================ -->
-<section id="offer-stack" class="section" aria-labelledby="offer-heading">
-  <div class="container">
-    <div class="offer-stack-inner">
-      <div class="section-header reveal">
-        <span class="kicker">What's included</span>
-        <h2 id="offer-heading">A $1,500+ production, delivered to you free.</h2>
-        <p>Professional gear. Full cinematic edit. Licensed music. All rights. Yours to keep forever.</p>
-      </div>
-
-      <div class="stack-list reveal d1">
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Professional half-day video shoot
-          </div>
-          <div class="stack-item-price">$500–$1,500</div>
-        </div>
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            $50,000+ in professional camera gear
-          </div>
-          <div class="stack-item-price">Included</div>
-        </div>
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Full cinematic edit &amp; color grade
-          </div>
-          <div class="stack-item-price">$200–$500</div>
-        </div>
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Licensed music &amp; sound design
-          </div>
-          <div class="stack-item-price">$50–$200</div>
-        </div>
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            All rights to post, run in ads, share forever
-          </div>
-          <div class="stack-item-price">Often extra</div>
-        </div>
-        <div class="stack-row">
-          <div class="stack-item-name">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Reshoot guarantee if you're not thrilled
-          </div>
-          <div class="stack-item-price">Zero risk</div>
-        </div>
-      </div>
-
-      <div class="stack-total reveal d2">
-        <div class="stack-total-label">Total value</div>
-        <div class="stack-total-value">
-          <div class="stack-total-strike">$1,500–$2,200+</div>
-          <div class="stack-total-price">$0 <span>to you</span></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     PROCESS SECTION
-     ============================================================ -->
-<section id="how" class="section" aria-labelledby="process-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="kicker">How it works</span>
-      <h2 id="process-heading">Three steps. We do most of the work.</h2>
-    </div>
-
-    <div class="process-grid">
-      <!-- Step 1 -->
-      <div class="process-card reveal d1">
-        <div class="step-num">Step 01</div>
-        <div class="process-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .99h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-        </div>
-        <h3>Fill out the form below</h3>
-        <p class="process-label">Takes 60 seconds</p>
-        <p class="process-detail">Tell us your name, business, and how to reach you. That's it. No pitch calls, no lengthy intake forms. We reach out within one business day.</p>
-      </div>
-
-      <!-- Step 2 — FEATURED -->
-      <div class="process-card featured reveal d2">
-        <div class="process-card-badge">This part is free</div>
-        <div class="step-num">Step 02</div>
-        <div class="process-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
-        </div>
-        <h3>We show up. You do almost nothing.</h3>
-        <p class="process-label">Shot, edited &amp; delivered</p>
-        <p class="process-detail">We come to your business with professional gear, shoot the footage, and handle every second of the edit. You just need to be there and be yourself.</p>
-      </div>
-
-      <!-- Step 3 -->
-      <div class="process-card reveal d3">
-        <div class="step-num">Step 03</div>
-        <div class="process-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <h3>Get your video in 7–14 days.</h3>
-        <p class="process-label">Yours forever — zero obligation</p>
-        <p class="process-detail">A polished, professional promo video lands in your inbox. Post it everywhere. Run it in ads. Keep it forever. Whether you work with us again is 100% up to you.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     WHO IT'S FOR SECTION
-     ============================================================ -->
-<section id="who" class="section" aria-labelledby="who-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="kicker">Is this for you?</span>
-      <h2 id="who-heading">This works especially well if you're a...</h2>
-    </div>
-
-    <div class="who-grid">
-      <div class="who-card reveal d1">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 002-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 00-5 5v6c0 1.1.9 2 2 2h3v5"/></svg></div>
-        <div class="who-card-label">Restaurant or Bar</div>
-        <div class="who-card-desc">Show off your food, atmosphere, and experience before customers ever walk in. Video is the #1 driver of restaurant discovery on social.</div>
-      </div>
-      <div class="who-card reveal d1">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="who-card-label">Contractor or Tradesperson</div>
-        <div class="who-card-desc">Pressure washing, HVAC, roofing, landscaping — people hire who they trust. A video makes you the obvious choice before they ever call.</div>
-      </div>
-      <div class="who-card reveal d2">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <div class="who-card-label">Gym or Fitness Studio</div>
-        <div class="who-card-desc">A great video makes people feel the energy before they sign up. Show the community, the vibe, the results.</div>
-      </div>
-      <div class="who-card reveal d2">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22V12"/><path d="M5 12H2a10 10 0 0020 0h-3"/><path d="M8 5.2C8.5 4 9.8 3 12 3s3.5 1 4 2.2"/><path d="M12 12c0-5-4-7-4-7s0 6 4 7z"/><path d="M12 12c0-5 4-7 4-7s0 6-4 7z"/></svg></div>
-        <div class="who-card-label">Farm, Market, or Venue</div>
-        <div class="who-card-desc">Seasonal businesses live and die by local awareness. Video content drives Google rankings and Facebook reach like nothing else.</div>
-      </div>
-      <div class="who-card reveal d3">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-        <div class="who-card-label">Local Shop or Boutique</div>
-        <div class="who-card-desc">Help people discover what makes you special — and give them a reason to choose you over Amazon or the chain down the street.</div>
-      </div>
-      <div class="who-card reveal d3">
-        <div class="who-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
-        <div class="who-card-label">Wellness or Service Business</div>
-        <div class="who-card-desc">Salons, spas, therapists, chiropractors — trust is everything in your industry. Video builds it faster than any ad you can buy.</div>
-      </div>
-    </div>
-
-    <div class="who-bottom reveal d4">
-      <p><strong>If you have a business that local people should know about — and they don't yet — this is for you.</strong> We serve Harrisonburg, Staunton, Waynesboro, Winchester, and everywhere in between. If you're in the Shenandoah Valley, we want to help.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SERVICES SECTION
-     ============================================================ -->
-<section id="services" class="section" aria-labelledby="services-heading">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="kicker">The full system</span>
-      <h2 id="services-heading">Love the video? Here's what working together looks like.</h2>
-      <p class="lead" style="max-width:600px;margin-top:12px;">The free video is just the first step. Clients who want to keep growing add ads, social, and a website that converts.</p>
-    </div>
-
-    <div class="services-layout">
-      <!-- Featured: Videography -->
-      <div class="service-featured reveal">
-        <div class="sf-left">
-          <h3>Ongoing Video Content</h3>
-          <p class="lead">After the free shoot, clients who keep rolling see the biggest results. Monthly content keeps you top-of-mind and gives ads fresh material to work with.</p>
-          <ul class="sf-list" role="list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Monthly content packages
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Short-form Reels &amp; TikTok content
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Event &amp; product shoots
-            </li>
-          </ul>
-          <a href="#claim" class="btn btn-primary">Get started →</a>
-        </div>
-
-        <!-- Reel UI (decorative) -->
-        <div class="reel-ui" aria-hidden="true">
-          <div class="reel-header">
-            <span class="reel-title">Now editing</span>
-            <span class="reel-live"><span></span> Live</span>
-          </div>
-          <div class="reel-track">
-            <div class="reel-item">
-              <div class="reel-thumb">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </div>
-              <div class="reel-info">
-                <div class="reel-name">Interstate Bowl — Promo</div>
-                <div class="reel-bar-wrap"><div class="reel-bar" style="width:78%"></div></div>
-              </div>
-            </div>
-            <div class="reel-item">
-              <div class="reel-thumb">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </div>
-              <div class="reel-info">
-                <div class="reel-name">Duck Butter Farm — Spring</div>
-                <div class="reel-bar-wrap"><div class="reel-bar" style="width:54%"></div></div>
-              </div>
-            </div>
-            <div class="reel-item">
-              <div class="reel-thumb">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-              </div>
-              <div class="reel-info">
-                <div class="reel-name">Gilliams — Before &amp; After</div>
-                <div class="reel-bar-wrap"><div class="reel-bar" style="width:32%"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Service grid -->
-      <div class="service-grid">
-        <!-- Paid Ads -->
-        <div class="service-card reveal d1">
-          <div class="sc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-          </div>
-          <h3>Meta Ads</h3>
-          <p class="lead">Your video is only as powerful as the eyeballs on it. We run Facebook &amp; Instagram campaigns that put your content in front of people who are ready to buy.</p>
-          <ul class="sc-list" role="list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Facebook &amp; Instagram ad campaigns
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Audience targeting &amp; retargeting
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Monthly reporting & optimization
-            </li>
-          </ul>
-          <a href="meta-ads.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
-        </div>
-
-        <!-- Social Media -->
-        <div class="service-card reveal d2">
-          <div class="sc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
-          </div>
-          <h3>Social Media Management</h3>
-          <p class="lead">Showing up consistently is 80% of the game. We create, schedule, and manage your content so you can focus on running your business.</p>
-          <ul class="sc-list" role="list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Content calendar &amp; scheduling
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Short-form video &amp; graphics
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Community engagement &amp; growth
-            </li>
-          </ul>
-          <a href="social-media.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
-        </div>
-
-        <!-- Websites -->
-        <div class="service-card reveal d3">
-          <div class="sc-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3>Website Design</h3>
-          <p class="lead">A great video deserves a great place to land. We build custom websites that turn visitors into customers — starting at $299.</p>
-          <ul class="sc-list" role="list">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Custom design — no templates
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Mobile-first &amp; fast-loading
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Built to rank on Google
-            </li>
-          </ul>
-          <a href="websites.html" class="btn btn-ghost" style="margin-top:auto;">Learn More →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============================================================
      FOUNDER SECTION
      ============================================================ -->
 <section id="founder" class="section" aria-labelledby="founder-heading">
@@ -2955,12 +2798,12 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 
       <!-- Bio -->
       <div class="founder-bio-wrap">
-        <span class="kicker reveal">Why we do this</span>
-        <h2 id="founder-heading" class="reveal d1">Why would we shoot a $1,500 video for free?</h2>
+        <span class="kicker reveal">03 The guy behind the camera</span>
+        <h2 id="founder-heading" class="reveal d1">You're not hiring an agency. You're hiring a neighbor who hates losing.</h2>
 
         <div class="founder-bio-text reveal d2">
-          <p>Because I'm tired of watching great local businesses lose to competitors with bigger marketing budgets. I've seen it happen — a restaurant with better food than any chain in the county, sitting empty on Tuesday nights. A contractor who does flawless work, but nobody knows his name. It shouldn't be that way.</p>
-          <p>I grew up in the Shenandoah Valley. I played college football and learned that you earn trust through performance — not promises. So I made a decision: I'll prove what we can do before you spend a single dollar. If you love the video and want to keep working together, great. If you just want the video and nothing else, it's yours. No pressure. No invoice. That's how I want to do business.</p>
+          <p>I grew up in the Shenandoah Valley and played college football — which means I understand what it takes to compete, show up every day, and earn trust through performance, not promises. After hanging up the cleats, I turned my obsession with film and storytelling into Wat Media.</p>
+          <p>I built this business on one belief: small businesses in our valley deserve the same quality content as national brands, without the agency overhead and the six-month contracts. So I made the first video free. Simple as that.</p>
         </div>
 
         <div class="founder-signature reveal d2" aria-label="Freddie's signature">— Freddie</div>
@@ -2971,7 +2814,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
             <div class="stat-label">First video</div>
           </div>
           <div class="stat-item" role="listitem">
-            <div class="stat-number" data-count="6">0</div>
+            <div class="stat-number" data-count="4">0</div>
             <div class="stat-label">Clients served</div>
           </div>
           <div class="stat-item" role="listitem">
@@ -2998,15 +2841,15 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 
       <!-- Left sticky -->
       <div class="faq-left reveal">
-        <span class="kicker">Questions</span>
-        <h2 id="faq-heading">You're probably thinking there's a catch. There isn't.</h2>
+        <span class="kicker">04 Questions</span>
+        <h2 id="faq-heading">Everything you're probably wondering.</h2>
 
         <div class="wat-promise" role="note" aria-label="The Wat Promise">
           <div class="wat-promise-title">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             The Wat Promise
           </div>
-          <p>If you're not thrilled with your free promo video, we'll reshoot it — at no cost, no questions asked. We don't invoice for work that doesn't speak for itself.</p>
+          <p>If you're not thrilled with your free promo video, we'll reshoot it — no questions, no hassle. We don't send invoices for work that doesn't speak for itself.</p>
         </div>
       </div>
 
@@ -3015,21 +2858,11 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 
         <details class="faq-item">
           <summary>
-            Seriously — it's actually free? What's the catch?
+            Is the promo video actually free?
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-answer">
-            Yes, 100% free. We shoot it, edit it, deliver it, and you keep it forever — whether you ever work with us again or not. The "catch" is that we're betting you'll like what we do and want to keep going. But we never pressure anyone. The video is yours unconditionally.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            What if I just want the free video and nothing else?
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </summary>
-          <div class="faq-answer">
-            Then you get a free professional video and we part as friends. Seriously — this happens, and we're completely fine with it. We'd rather have a great video floating around the Valley with our work on it than force a relationship that isn't right. The only thing we ask: if you love it, tell someone.
+            Yes — 100% free. No hidden fees, no "setup charge," no invoice waiting at the end. We shoot, edit, and deliver a professional promo video for your business at zero cost. You keep the video whether you hire us for anything else or not.
           </div>
         </details>
 
@@ -3039,7 +2872,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-answer">
-            Most clients see the quality of their video and want to keep working together — running Meta ads, managing their social media, or shooting more content. That's where we build a real business relationship. But we never pressure you. Ever. The free video is how we earn the right to have that conversation.
+            The free video is our way of proving what we can do before asking for a dime. Most clients who see the quality of their video want to keep working together — running Meta ads, managing social media, or creating more content. That's where we grow together. But we never pressure you. Ever.
           </div>
         </details>
 
@@ -3049,7 +2882,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-answer">
-            Local businesses in the Shenandoah Valley — restaurants, contractors, gyms, farms, shops, service providers, venues, medical practices, and more. If you have a business that local people should know about, we want to help you get found.
+            We focus on local businesses in the Shenandoah Valley — restaurants, shops, service providers, farms, venues, gyms, salons, contractors, and more. If you have a business and customers who need to find you, we can help. We've worked with bowling alleys, pressure washing companies, golf companies, and farms — and the list keeps growing.
           </div>
         </details>
 
@@ -3059,7 +2892,17 @@ details[open] .faq-chevron { transform: rotate(180deg); }
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="faq-answer">
-            From form submission to finished video is typically 7–14 days. We'll schedule the shoot at your convenience, film in a few hours, and deliver the edited video within a week of the shoot day.
+            From our initial call to your finished video typically takes 7–14 days. We'll schedule the shoot around your availability, film in a few hours, and deliver the edited video within a week of the shoot day. Fast, professional, and painless.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            What happens after the video?
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-answer">
+            You get the video and it's yours — post it, use it in ads, put it on your website, share it everywhere. If you want to talk about ongoing work (ads management, social media content, more video shoots), we'll have that conversation. No pressure, just a conversation between neighbors.
           </div>
         </details>
 
@@ -3082,44 +2925,38 @@ details[open] .faq-chevron { transform: rotate(180deg); }
           <path d="M62 30 C70 18 82 14 92 20 C104 27 104 43 92 48 C84 52 75 49 69 42" stroke="#0055FE" stroke-width="11" stroke-linecap="round"/>
         </svg>
 
-        <h2 id="claim-heading">Lock in your free shoot before the month fills up.</h2>
-        <p>We take 3–5 new shoots per month to keep quality high. Fill in the form and we'll reach out within one business day to schedule yours.</p>
+        <h2 id="claim-heading">Ready to see what your business looks like on camera?</h2>
+        <p>Fill in a few details and we'll reach out to schedule your free shoot. Takes 60 seconds.</p>
 
         <ol class="claim-steps" aria-label="How it works">
           <li class="claim-step">
             <div class="claim-step-num" aria-hidden="true">1</div>
             <div class="claim-step-text">
               <strong>Submit this form</strong>
-              Takes 60 seconds. We reach out within one business day.
+              We'll reach out within one business day to confirm your details.
             </div>
           </li>
           <li class="claim-step">
             <div class="claim-step-num" aria-hidden="true">2</div>
             <div class="claim-step-text">
-              <strong>We schedule your shoot</strong>
-              We work around your schedule and come to you.
+              <strong>Book your 15-min call</strong>
+              We'll learn about your business and plan the shoot together.
             </div>
           </li>
           <li class="claim-step">
             <div class="claim-step-num" aria-hidden="true">3</div>
             <div class="claim-step-text">
-              <strong>Get your finished video</strong>
-              Polished, professional, delivered free. Ready to post anywhere.
+              <strong>We show up and shoot</strong>
+              Professional gear, cinematic edit, delivered free. Done.
             </div>
           </li>
         </ol>
-
-        <div class="guarantee-callout">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <p><strong>Reshoot guarantee, no questions asked.</strong> If you're not thrilled with the video, we shoot it again — free. You have zero risk here.</p>
-        </div>
-        <p class="scarcity-note">3–5 spots available per month · Shenandoah Valley, VA</p>
       </div>
 
       <!-- Right: Form -->
       <div class="form-card reveal d1">
         <div class="form-title">Claim My Free Promo Video</div>
-        <div class="form-sub">No commitment. No invoice. Yours forever.</div>
+        <div class="form-sub">No commitment. No invoice. Just great video.</div>
 
         <!-- Form (replace action with Formspree URL when live: https://formspree.io/f/YOUR_FORM_ID) -->
         <form id="contact-form" novalidate aria-label="Contact form">
@@ -3139,6 +2976,21 @@ details[open] .faq-chevron { transform: rotate(180deg); }
               <label for="field-email">Email address</label>
               <input type="email" id="field-email" name="email" placeholder="jane@example.com" autocomplete="email" required>
             </div>
+            <div class="form-group">
+              <label for="field-phone">Phone number</label>
+              <input type="tel" id="field-phone" name="phone" placeholder="(540) 555-0100" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="field-service">I'm most interested in</label>
+            <select id="field-service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option value="free-video">The free promo video</option>
+              <option value="meta-ads">Meta Ads (Facebook &amp; Instagram)</option>
+              <option value="social-media">Social Media Management</option>
+              <option value="all">Everything — let's talk</option>
+            </select>
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg form-submit" aria-label="Submit form to claim your free promo video">
@@ -3156,7 +3008,7 @@ details[open] .faq-chevron { transform: rotate(180deg); }
           <div class="form-success-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <h3>You're in!</h3>
+          <h3>You're in! 🎬</h3>
           <p>We'll reach out within one business day to get your shoot scheduled. Keep an eye on your inbox.</p>
         </div>
       </div>
@@ -3169,42 +3021,41 @@ details[open] .faq-chevron { transform: rotate(180deg); }
      FOOTER
      ============================================================ -->
 <footer id="footer" role="contentinfo">
+  <div class="footer-wordmark" aria-hidden="true"><img src="Wat_Media_Exact_Logo_Package/wat_media_logo_with_tagline.svg" alt=""></div>
+
   <div class="container">
-    <div class="footer-top">
-      <div>
-        <a href="/" class="footer-logo-link">
-          <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="Wat Media">
-          <span>Wat Media</span>
-        </a>
-        <p class="footer-tagline">Video, ads, social &amp; websites for Shenandoah Valley businesses.</p>
-        <div class="footer-social-row">
-          <a href="https://www.instagram.com/fr3ddie7/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.facebook.com/freddie.watkins.33886" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.6l.4-3h-3V9.1c0-.9.3-1.5 1.6-1.5H16.7V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6v7h3Z"/></svg>
-          </a>
-          <a href="mailto:freddie@watmediallc.com" class="footer-social" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
-          </a>
-        </div>
+    <div class="footer-inner">
+
+      <div class="footer-left">
+        <p class="footer-copy">
+          © <span id="footer-year">2026</span> Wat Media · Shenandoah Valley, VA
+        </p>
+        <p class="footer-copy">
+          <a href="mailto:hello@watmediallc.com" class="footer-email-link">hello@watmediallc.com</a>
+        </p>
       </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/videography">Videography</a>
-        <a href="/meta-ads">Meta Ads</a>
-        <a href="/social-media">Social Media</a>
-        <a href="/websites">Websites</a>
-        <a href="#faq">FAQ</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="#claim">Free Video</a>
-      </nav>
-    </div>
-    <div class="footer-bottom">
-      <span>© <span id="footer-year">2026</span> Wat Media LLC</span>
-      <span>59 Locust St, Fishersville, VA</span>
-      <a href="tel:+15408495280">(540) 849-5280</a>
-      <a href="mailto:freddie@watmediallc.com">freddie@watmediallc.com</a>
+
+      <div class="footer-center">
+        <a href="https://www.instagram.com/fr3ddie7/" class="footer-social" aria-label="Follow Wat Media on Instagram" target="_blank" rel="noopener noreferrer">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/freddie.watkins.33886" class="footer-social" aria-label="Follow Wat Media on Facebook" target="_blank" rel="noopener noreferrer">
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-tagline">Reach. Engage. Grow.</p>
+      </div>
+
     </div>
   </div>
 </footer>
@@ -3480,12 +3331,12 @@ details[open] .faq-chevron { transform: rotate(180deg); }
       } else {
         submitBtn.textContent = 'Claim My Free Promo Video →';
         submitBtn.disabled = false;
-        alert('Something went wrong. Please try again or email freddie@watmediallc.com');
+        alert('Something went wrong. Please try again or email hello@watmediallc.com');
       }
     }).catch(function () {
       submitBtn.textContent = 'Claim My Free Promo Video →';
       submitBtn.disabled = false;
-      alert('Something went wrong. Please email freddie@watmediallc.com directly.');
+      alert('Something went wrong. Please email hello@watmediallc.com directly.');
     });
   });
 
@@ -3529,5 +3380,5 @@ details[open] .faq-chevron { transform: rotate(180deg); }
 })();
 </script>
 
-<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ab4951450fc24ace688b898" data-source="WEB_USER"></script></body>
+</body>
 </html>
