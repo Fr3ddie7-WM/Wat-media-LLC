@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Tips for Small Businesses — Wat Media Blog</title>
+<meta name="description" content="Free marketing advice for Shenandoah Valley small businesses — websites, SEO, short-form video, social media, and Google Business Profile tips from Wat Media.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marketing Tips for Small Businesses — Wat Media Blog">
+<meta property="og:description" content="Free marketing advice for Shenandoah Valley small businesses — websites, SEO, short-form video, and social media tips.">
+<meta property="og:image" content="https://watmediallc.com/assets/og-image.jpg">
+<meta property="og:url" content="https://watmediallc.com/blog">
+<meta property="og:site_name" content="Wat Media">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketing Tips for Small Businesses — Wat Media Blog">
+<meta name="twitter:image" content="https://watmediallc.com/assets/og-image.jpg">
+
+<link rel="canonical" href="https://watmediallc.com/blog">
+<link rel="icon" href="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wat.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Wat Media Blog",
+  "description": "Marketing tips for small businesses in the Shenandoah Valley — websites, SEO, video, and social media.",
+  "url": "https://watmediallc.com/blog",
+  "publisher": {
+    "@type": "LocalBusiness",
+    "@id": "https://watmediallc.com/#business",
+    "name": "Wat Media",
+    "url": "https://watmediallc.com"
+  }
+}
+</script>
+
+<style>
+/* ── BLOG PAGE ── */
+
+/* Hero */
+.blog-hero {
+  padding: clamp(32px, 5vw, 60px) 0 clamp(24px, 4vw, 44px);
+  border-bottom: 1px solid var(--paper-line);
+}
+.blog-hero-inner { max-width: 680px; }
+.blog-hero .kicker { margin-bottom: 12px; }
+.blog-hero h1 {
+  font-size: clamp(22px, 3.6vw, 46px);
+  line-height: 1.08;
+  margin-bottom: 12px;
+}
+.blog-hero .lead { margin-bottom: 18px; }
+
+/* Category filter */
+.cat-filter {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.cat-btn {
+  display: inline-flex; align-items: center;
+  background: var(--paper-2); border: 1px solid var(--paper-line);
+  border-radius: 100px; padding: 6px 16px;
+  font-family: var(--font-body); font-size: 13px; font-weight: 700;
+  color: var(--text-lo); cursor: pointer;
+  transition: background .15s, color .15s, border-color .15s;
+  text-decoration: none;
+}
+.cat-btn:hover, .cat-btn.active {
+  background: var(--blue-dim); border-color: var(--blue);
+  color: var(--blue);
+}
+
+/* Featured post */
+.blog-featured {
+  padding: clamp(40px, 6vw, 72px) 0 0;
+}
+.featured-card {
+  display: grid; grid-template-columns: 1fr;
+  gap: 0;
+  background: var(--paper-2);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  transition: box-shadow .2s, transform .2s;
+}
+.featured-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+@media (min-width: 760px) {
+  .featured-card { grid-template-columns: 1.2fr 0.8fr; }
+}
+.featured-thumb {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 760px) {
+  .featured-thumb { aspect-ratio: auto; min-height: 320px; }
+}
+.featured-thumb-bg {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 72px;
+}
+.featured-body {
+  padding: clamp(24px, 4vw, 40px);
+  display: flex; flex-direction: column; justify-content: center;
+}
+.featured-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 14px;
+}
+.featured-tag::before { content: '★'; font-size: 10px; }
+.featured-body h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  margin-bottom: 12px; line-height: 1.2;
+}
+.featured-body p {
+  font-size: 15px; color: var(--text-lo); line-height: 1.65;
+  margin-bottom: 20px;
+}
+.post-meta {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  font-size: 12.5px; color: var(--text-lo); font-weight: 600;
+}
+.post-meta .dot-sep { opacity: .4; }
+.post-cat {
+  display: inline-block;
+  background: var(--blue-dim); color: var(--blue);
+  font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 100px;
+}
+
+/* Post grid */
+.blog-grid-section { padding: clamp(40px, 6vw, 72px) 0; }
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 600px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.post-card {
+  background: var(--paper-2);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-decoration: none;
+  display: flex; flex-direction: column;
+  transition: box-shadow .2s, transform .2s;
+}
+.post-card:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+}
+.post-thumb {
+  aspect-ratio: 16/9;
+  position: relative;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+}
+.post-body { padding: 20px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+.post-body h3 { font-size: 17px; font-weight: 800; color: var(--text-ink); margin-bottom: 8px; line-height: 1.3; }
+.post-body p { font-size: 14px; color: var(--text-lo); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+.post-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.read-more { font-size: 13px; font-weight: 800; color: var(--blue); text-decoration: none; }
+.read-more:hover { text-decoration: underline; }
+
+/* Gradient thumbs */
+.thumb-seo    { background: linear-gradient(135deg, #0047FF 0%, #6EA8FF 100%); }
+.thumb-video  { background: linear-gradient(135deg, #7C3AED 0%, #C084FC 100%); }
+.thumb-web    { background: linear-gradient(135deg, #0891B2 0%, #67E8F9 100%); }
+.thumb-social { background: linear-gradient(135deg, #EC4899 0%, #F9A8D4 100%); }
+.thumb-google { background: linear-gradient(135deg, #16A34A 0%, #86EFAC 100%); }
+.thumb-local  { background: linear-gradient(135deg, #EA580C 0%, #FED7AA 100%); }
+
+/* CTA band */
+.blog-cta {
+  background: var(--paper-2);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-lg);
+  padding: clamp(32px, 5vw, 56px);
+  text-align: center;
+  margin: 0 0 clamp(52px, 8vw, 96px);
+}
+.blog-cta h2 { margin-bottom: 12px; }
+.blog-cta p { color: var(--text-lo); max-width: 46ch; margin: 0 auto 28px; line-height: 1.65; }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/flat-inner-v7.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Wat Media home">
+      <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="Wat Media logo" width="44" height="30">
+      <span class="wordmark">Wat Media</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html#how">Process</a>
+      <div class="nav-drop">
+        <button class="nav-link" aria-haspopup="true">Services
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="drop-panel">
+          <a href="videography.html"><span class="t">Videography</span><span class="d">Free first promo video</span></a>
+          <a href="meta-ads.html"><span class="t">Meta Ads</span><span class="d">Facebook &amp; Instagram campaigns</span></a>
+          <a href="social-media.html"><span class="t">Social Media</span><span class="d">Instagram, Facebook &amp; TikTok</span></a>
+          <a href="websites.html"><span class="t">Website Design</span><span class="d">Hand-coded, from $149/mo</span></a>
+        </div>
+      </div>
+      <a href="index.html#founder">Meet Freddie</a>
+      <a href="blog.html" aria-current="page">Blog</a>
+    </nav>
+    <a href="index.html#claim" class="btn btn-primary nav-cta">Claim Free Video</a>
+    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="menu" aria-label="Mobile navigation">
+  <p class="menu-label">Services</p>
+  <a class="menu-link" href="videography.html"><span class="idx">01</span>Videography <span class="tag">FREE FIRST VIDEO</span></a>
+  <a class="menu-link" href="meta-ads.html"><span class="idx">02</span>Meta Ads</a>
+  <a class="menu-link" href="social-media.html"><span class="idx">03</span>Social Media</a>
+  <a class="menu-link" href="websites.html"><span class="idx">04</span>Websites</a>
+  <p class="menu-label">More</p>
+  <a class="menu-link" href="index.html#how">Process</a>
+  <a class="menu-link" href="index.html#founder">Meet Freddie</a>
+  <a class="menu-link" href="blog.html">Blog</a>
+  <div class="menu-foot">
+    <a href="index.html#claim" class="btn btn-primary btn-lg">Claim Free Video →</a>
+    <span class="mono-line">Shenandoah Valley, VA · Booking now</span>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-inner">
+        <p class="kicker reveal in"><span class="rec-dot"></span>The Wat Media Blog</p>
+        <h1 class="reveal in">Blogs</h1>
+        <p class="lead reveal in">No jargon, no fluff — just practical tips on websites, SEO, video, and social media for small businesses in the Shenandoah Valley.</p>
+        <div class="cat-filter reveal in">
+          <a href="#" class="cat-btn active">All Posts</a>
+          <a href="#" class="cat-btn">SEO</a>
+          <a href="#" class="cat-btn">Websites</a>
+          <a href="#" class="cat-btn">Video</a>
+          <a href="#" class="cat-btn">Social Media</a>
+          <a href="#" class="cat-btn">Google</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED POST -->
+  <section class="blog-featured">
+    <div class="container">
+      <a href="#" class="featured-card reveal in">
+        <div class="featured-thumb thumb-seo">
+          <div class="featured-thumb-bg">🔍</div>
+        </div>
+        <div class="featured-body">
+          <span class="featured-tag">Featured</span>
+          <h2>5 Reasons Your Shenandoah Valley Business Needs a Website in 2026</h2>
+          <p>If customers can't find you on Google, they're finding your competitor instead. Here's exactly what a proper website does for local foot traffic, phone calls, and trust — and why "having a Facebook page" isn't enough anymore.</p>
+          <div class="post-meta">
+            <span class="post-cat">Websites</span>
+            <span class="dot-sep">·</span>
+            <span>8 min read</span>
+            <span class="dot-sep">·</span>
+            <span>July 2026</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- POST GRID -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <a href="#" class="post-card reveal">
+          <div class="post-thumb thumb-google">🗺️</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Google</span>
+              <span class="dot-sep">·</span><span>5 min read</span>
+            </div>
+            <h3>How to Set Up and Optimize Your Google Business Profile</h3>
+            <p>Google Business Profile is the single most important free tool for local businesses. Here's how to set it up correctly and actually show up when people search nearby.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>July 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d1">
+          <div class="post-thumb thumb-video">🎬</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Video</span>
+              <span class="dot-sep">·</span><span>6 min read</span>
+            </div>
+            <h3>Why Short-Form Video Is the #1 Marketing Tool for Local Businesses Right Now</h3>
+            <p>Instagram Reels and TikTok aren't just for influencers. Local restaurants, contractors, and shops are getting hundreds of new customers from 30-second videos.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>July 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d2">
+          <div class="post-thumb thumb-web">⚡</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Websites</span>
+              <span class="dot-sep">·</span><span>4 min read</span>
+            </div>
+            <h3>What a 98 PageSpeed Score Actually Means for Your Business</h3>
+            <p>A slow website doesn't just frustrate visitors — it tanks your Google ranking. Here's what page speed actually measures and why it matters for local SEO.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>June 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal">
+          <div class="post-thumb thumb-social">📱</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Social Media</span>
+              <span class="dot-sep">·</span><span>7 min read</span>
+            </div>
+            <h3>Instagram Reels vs. TikTok vs. Facebook: What's Best for Your Local Business?</h3>
+            <p>You don't need to be everywhere. Here's a plain-English breakdown of which platform actually drives customers for small businesses — and which ones to skip.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>June 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d1">
+          <div class="post-thumb thumb-seo">📈</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">SEO</span>
+              <span class="dot-sep">·</span><span>6 min read</span>
+            </div>
+            <h3>Local SEO in 2026: How to Show Up When Customers Search Near You</h3>
+            <p>Most local business owners have no idea how Google decides who shows up first. Here's the practical side of local SEO — what actually moves the needle in the Valley.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>June 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d2">
+          <div class="post-thumb thumb-local">⭐</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Google</span>
+              <span class="dot-sep">·</span><span>5 min read</span>
+            </div>
+            <h3>How to Get More 5-Star Google Reviews (Without Being Annoying About It)</h3>
+            <p>Reviews are the #1 factor in local search ranking — and most businesses leave them completely to chance. Here's a simple system to get more of them, consistently.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>May 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal">
+          <div class="post-thumb thumb-video">🎥</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Video</span>
+              <span class="dot-sep">·</span><span>5 min read</span>
+            </div>
+            <h3>What to Expect From a Promo Video Shoot (A Day-of Breakdown)</h3>
+            <p>Never had a professional video made for your business? Here's exactly what happens from the moment we show up to when you get your finished video ready to post.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>May 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d1">
+          <div class="post-thumb thumb-web">🖥️</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Websites</span>
+              <span class="dot-sep">·</span><span>4 min read</span>
+            </div>
+            <h3>5 Signs Your Current Website Is Costing You Customers</h3>
+            <p>A bad website is worse than no website. Here are the five warning signs that your site is driving people away — and what to do about each one.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>April 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="post-card reveal reveal-d2">
+          <div class="post-thumb thumb-social">📣</div>
+          <div class="post-body">
+            <div class="post-meta" style="margin-bottom:10px">
+              <span class="post-cat">Social Media</span>
+              <span class="dot-sep">·</span><span>6 min read</span>
+            </div>
+            <h3>How to Write Captions That Actually Get Engagement (Not Just Likes)</h3>
+            <p>Likes don't pay the bills — comments, saves, and shares do. Here's the caption formula local businesses use to turn followers into actual customers walking through the door.</p>
+            <div class="post-footer">
+              <div class="post-meta"><span>April 2026</span></div>
+              <span class="read-more">Read →</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="container">
+    <div class="blog-cta reveal">
+      <p class="kicker" style="justify-content:center;margin-bottom:14px"><span class="rec-dot"></span>Ready to grow?</p>
+      <h2>Stop reading about marketing.<br>Let's <span class="hl">actually do it.</span></h2>
+      <p>Claim your free promo video and see what Wat Media can build for your business — no commitment, no invoice.</p>
+      <a href="index.html#claim" class="btn btn-primary btn-lg">Claim My Free Video →</a>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="footer-logo-link">
+          <img src="Wat_Media_Exact_Logo_Package/wat_media_symbol_only.svg" alt="Wat Media">
+          <span>Wat Media</span>
+        </a>
+        <p class="footer-tagline">Video, ads, social &amp; websites for Shenandoah Valley businesses.</p>
+        <div class="footer-social-row">
+          <a href="https://www.instagram.com/fr3ddie7/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.8" cy="6.2" r="1.3" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/freddie.watkins.33886" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.6l.4-3h-3V9.1c0-.9.3-1.5 1.6-1.5H16.7V4.9c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6v7h3Z"/></svg>
+          </a>
+          <a href="mailto:freddie@watmediallc.com" class="footer-social" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="videography.html">Videography</a>
+        <a href="meta-ads.html">Meta Ads</a>
+        <a href="social-media.html">Social Media</a>
+        <a href="websites.html">Websites</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#claim">Free Video</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wat Media LLC</span>
+      <span>Shenandoah Valley, VA</span>
+      <a href="mailto:freddie@watmediallc.com">Email Freddie</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/wat.min.js"></script>
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6ab4951450fc24ace688b898" data-source="WEB_USER"></script></body>
+</html>
